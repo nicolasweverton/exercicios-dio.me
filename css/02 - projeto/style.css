@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/*ESTILOS GLOBAIS*/
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+}
+h2 {
+    font-size: 20px;
+    font-weight: 600;
+}
+h3 {
+    font-size: 14px;
+    font-weight: 600;
+}
+h4 {
+    font-size: 14px;
+    font-weight: 600;
+}
+p {
+    font-size: 14px;
+    font-weight: 400;
+}
+header{
+    display: flex;
+    justify-content: center;
+}
+button{
+    width: 160px;
+    height: 40px;
+    border: none;
+    border-radius: 2px;
+    background-color: #CC0000;
+    color: white;
+}
+
+/*HEADER*/
+.menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 1440px;
+    height: 60px;
+    padding: 0px, 24px, 0px, 24px;
+}
+
+.header-left img{
+    padding-right: 24px;
+}
+
+.header-mid{
+    display: flex;
+    align-items: center;
+}
+
+.search{
+    width: 348px;
+    height: 40px;
+    border: 1px solid #CCCCCC;
+}
+
+.icon-search{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 57px;
+    height: 40px;
+    border: 1px solid #CCCCCC;
+    background-color: #F8F8F8;
+}
+
+.icon-search img{
+    padding-right: 5px;
+}
+
+.header-right img{
+    padding-left: 24px;
+}
+
+/*MAIN*/
+main{
+    background-color: #F9F9F9;
+}
+.main-watching{
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+}
+.watching-main{
+    width: 1000px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.watching-main > .img-principal{
+    width: 952px;
+}
+.channel{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.watching-infos{
+    gap: 42px;
+    display: flex;
+}
+.icons-channel{
+    display: flex;
+    align-items: center;
+}
+.icons-channel img{
+    width: 20px;
+    height: 20px;
+    padding-right: 10px;
+}
+
+/*SLIDER*/
+.slidebar-main{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.video{
+    display: flex;
+}
+.txt-video{
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    gap: 5px;
+}
