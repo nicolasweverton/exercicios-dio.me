@@ -16,7 +16,7 @@ h3 {
 }
 h4 {
     font-size: 14px;
-    font-weight: 400;
+    font-weight: 500;
 }
 .videos h4{
     font-weight: 600;
@@ -72,3 +72,56 @@ header{
 .header-right img{
     padding-left: 24px;
 }
+
+/*MAIN*/
+main{
+    display: flex;
+    background-color: #F9F9F9;
+}
+
+/*SLIDEBAR*/
+.slidebar{
+    width: 14%;
+    height: 968px;
+    background-color: #fff;
+    padding-left: 24px;
+    padding-top: 24px;
+}
+
+.menu-item{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding-bottom: 24px;
+}
+
+.videos{
+    padding: 24px;
+    width: 86%;
+}
+
+.colum-video{
+    display: flex;
+    justify-content: center;
+}
+
+.card-video{
+    padding: 16px;
+    width: 286px;
+}
+
+.card-video img{
+    width: 100%;
+}
+
+.infos-card-video{
+    display: flex;
+    padding-top: 10px;
+    gap: 10px;
+}
+
+.infos-card-video img{
+    width: 42px;
+    height: 42px;
+}
+
