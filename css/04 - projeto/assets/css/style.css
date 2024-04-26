@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Open Sans;
+}
+h1{
+    font-size: 56px;
+    font-weight: 400;
+    font-family: "Luckiest Guy", cursive;
+}
+h2{
+    font-size: 40px;
+    font-weight: 800;
+}
+p{
+    font-size: 15px;
+    font-weight: 400;
+}
+
+/*HEADER*/
+header{
+    background-image: url(/assets/images/header-background.jpg);
+    background-size: cover;
+    height: 460px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 760px;
+    gap: 24px
+}
+.header-content h1, p{
+    text-align: center;
+    color: #fff;
+}
+.buttons{
+    display: flex;
+    gap: 20px;
+}
+button{
+    color: #23272A;
+    padding: 12px 30px;
+    border-radius: 28px;
+    border: none;
+    background-color: #fff;
+    cursor: pointer;
+}
+button p{
+    color: #23272A;
+}
+.button-02{
+    background-color: #23272A;
+    color: #fff;
+}
+.button-02 p{
+    color: #fff;
+}
+
+/* MAIN */
+main{
+    width: 100%;
+}
+
+section{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+section p{
+    color: #23272A;
+    text-align: left;
+}
+
+.content{
+    display: flex;
+    align-self: center;
+    align-items: center;
+    padding: 50px 0;
+    width: 950px;
+    gap: 20px;
+}
+
+.content img{
+    height: 398px;
+}
+
+.greybackground{
+    background-color: #F6F6F6;
+}
+
+.lastsection{
+    background-color: #F6F6F6;
+}
+
+.lastsection > .content{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 800px;
+}
+
+.lastsection > .content img{
+    height: 500px;
+}
+.lastsection > .content h2{
+    font-family: "Luckiest Guy", cursive;
+    font-weight: 500;
+    padding-bottom: 20px;
+}
+.lastsection > .content p{
+    text-align: center;
+}
+
+/* FOOTER */
+footer{
+    background-color: #23272A;
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+}
+footer img{
+    width: 230px;
+}
+
+
+
+@media screen and (max-width: 768px){
+    h1{
+        font-size: 32px;
+    }
+    h2{
+        font-size: 24px;
+    }
+    img{
+        width: 450px;
+    }
+    .content{
+        flex-direction: column;
+        align-items: center;
+        padding: 20px
+    }
+    .content h2{
+        align-items: center;
+    }
+}
