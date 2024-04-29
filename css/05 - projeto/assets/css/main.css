@@ -1,0 +1,574 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&display=swap");
+
+:root {
+  --primary-color: #020228;
+  --secondary-color: #ff00e5;
+  --tertiary-color: #b535f6;
+  --btn-bg-color-gradient: linear-gradient(
+    45deg,
+    #9b34ef 0%,
+    #490cb0 30%,
+    transparent 70%
+  );
+  --btn-link-bg-color: #fff;
+  --btn-link-color: #000;
+  --card-bg-color: linear-gradient(0deg, transparent, #3b1e63);
+  --divider-bg-color: linear-gradient(
+    90deg,
+    #5516ba,
+    rgba(255, 0, 229, 0.5) 80%
+  );
+  --nav-bg-color: rgba(0, 0, 0, 0.3);
+  --text-color: #fff;
+  --link-color: #9e86ff;
+  --form-bg-color: rgba(211, 211, 211, 0.06);
+  --form-field-bg-color: rgba(0, 0, 0, 0.2);
+  --form-field-border: 1px solid rgba(255, 255, 255, 0.7);
+  --form-field-placeholder: rgba(255, 255, 255, 0.7);
+  --form-field-error: rgb(255, 76, 76);
+
+  scroll-behavior: smooth;
+
+  font-size: 62.5%;
+  background-color: var(--primary-color);
+}
+
+* {
+  font-size: 1.6rem;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Custom Scroll */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--tertiary-color);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary-color);
+}
+
+header {
+  background: var(--nav-bg-color);
+  padding: 1.6rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+nav {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+}
+
+nav a:first-of-type {
+  margin-right: auto;
+}
+
+@media (max-width: 700px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin: 1rem;
+  }
+
+  nav a:first-of-type {
+    margin-right: 0;
+  }
+}
+
+nav img {
+  width: 16rem;
+}
+
+nav #links {
+  justify-self: end;
+}
+
+@media (max-width: 400px) {
+  nav #links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+}
+
+nav #links a {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--text-color);
+  text-decoration: none;
+  letter-spacing: 0.2rem;
+  margin: 0 0.5rem;
+  padding: 1rem 3rem;
+}
+
+nav #links a:nth-of-type(2) {
+  background: var(--tertiary-color);
+  border-radius: 2.5rem;
+  transition: background 0.5s linear, color 0.5s linear;
+}
+
+nav #links a:nth-of-type(2):hover {
+  background: #fff;
+  color: #000;
+}
+
+#intro {
+  position: relative;
+  background: linear-gradient(120deg, #400b5a, #020228 30% 70%, #5e0e56);
+  background-size: 300% 300%;
+  padding: 10rem 3rem 25rem;
+  animation: gradient 10s ease infinite;
+}
+
+@media (max-width: 700px) {
+  #intro {
+    padding-top: 14rem;
+  }
+}
+
+@media (max-width: 400px) {
+  #intro {
+    padding-top: 22rem;
+  }
+}
+
+#intro::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(transparent 70%, #0202289c, var(--primary-color) 90%);
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+#intro #logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+#intro h2 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 3.5rem;
+  font-weight: 400;
+  color: white;
+  text-align: center;
+}
+
+#intro h2 span {
+  font-size: 4rem;
+  font-weight: 800;
+}
+
+#divider {
+  background: var(--divider-bg-color);
+  height: 0.5rem;
+  border-radius: 1rem;
+  width: 70rem;
+  max-width: 80%;
+  margin: 4rem auto;
+}
+
+#intro p {
+  font-family: 'Raleway', sans-serif;
+  font-size: 2rem;
+  color: var(--text-color);
+  text-align: center;
+}
+
+#intro .valor {
+  font-size: 4rem;
+  font-weight: 800;
+}
+
+#intro span:nth-of-type(2) {
+  font-size: 1.5rem;
+}
+
+#intro #btn-assineagora {
+  display: flex;
+  justify-content: center; 
+}
+
+#intro a {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--text-color);
+  text-decoration: none;
+  text-align: center;
+  letter-spacing: 0.4rem;
+  background: var(--btn-bg-color-gradient);
+  background-size: 350%;
+  background-position: 40%;
+  border-radius: 3rem;
+  padding: 1.6rem 4rem;
+  margin: 4rem 0;
+  transition: background-position 1s ease-in-out, 
+  scale 0.5s ease-in-out;
+  animation: wiggle 4s linear infinite;
+}
+
+#intro a:hover {
+  margin: calc(4rem - 2px) 0;
+  background-position: top right;
+  border: 2px solid var(--secondary-color);
+  scale: 1;
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(-10deg);
+  }
+  15% {
+    transform: rotate(10deg);
+  }
+  20% {
+    transform: rotate(-5deg);
+  }
+  25% {
+    transform: rotate(5deg);
+  }
+  30%, 100% {
+    transform: rotate(0deg);
+  }
+}
+
+#intro p:last-of-type {
+  font-size: 1.5rem;
+}
+
+#assinaturas {
+  background-image: url("../images/background-movies-series.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.6rem;
+  color: var(--text-color);
+  text-align: center;
+  padding: 7rem 7rem;
+}
+
+#assinaturas .perspective {
+  display: flex;
+  perspective: 2000px;
+}
+
+#assinaturas:has(.perspective:first-of-type:hover) .plan-card:not(:hover) {
+  transform: rotateY(-30deg);
+}
+
+#assinaturas:has(.perspective:last-of-type:hover) .plan-card:not(:hover) {
+  transform: rotateY(30deg);
+}
+
+#assinaturas h3 {
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+#assinaturas #plan-cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 5rem;
+  margin: 3rem;
+}
+
+#assinaturas .plan-card {
+  display: flex;
+  flex-direction: column; 
+  background: var(--card-bg-color);
+  border-radius: 1rem;
+  padding: 3rem;
+  transition: transform 0.5s ease-in-out;
+}
+
+#assinaturas .tipo-assinatura {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+#assinaturas .tipo-assinatura h4 {
+  font-size: 3rem;
+}
+
+#assinaturas .tipo-assinatura p {
+  margin-left: auto;
+}
+
+#assinaturas .tipo-assinatura .valor {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--secondary-color);
+}
+
+ul {
+  text-align: left;
+  list-style-type: "✦";
+  margin: 2rem 0 auto;
+}
+
+li {
+  font-size: 2rem;
+  padding: 0 1rem 2.5rem;
+}
+
+#assinaturas a {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--text-color);
+  text-decoration: none;
+  letter-spacing: 0.4rem;
+  background: var(--btn-bg-color-gradient);
+  background-size: 350%;
+  background-position: 40%;
+  border-radius: 3rem;
+  padding: 1.6rem 0;
+  transition: background-position 1s ease-in-out, 
+  scale 0.5s ease-in-out;
+}
+
+#assinaturas a:hover {
+  background-position: top right;
+  border: 2px solid var(--secondary-color);
+  scale: 1.05;
+}
+
+#assinaturas .plan-card:last-of-type a:hover {
+  margin: -2px;
+}
+
+@media (max-width: 1100px) {
+  #assinaturas #plan-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #assinaturas .plan-card {
+    transition: none;
+  }
+
+  #assinaturas:has(.perspective:first-of-type:hover) .plan-card:not(:hover) {
+    transform: none;
+  }
+  
+  #assinaturas:has(.perspective:last-of-type:hover) .plan-card:not(:hover) {
+    transform: none;
+  }
+}
+
+@media (max-width: 700px) {
+  #assinaturas {
+    padding: 7rem 5rem;
+  }
+
+  #assinaturas a {
+    font-size: 1.3rem;
+  }
+
+  #assinaturas #plan-cards {
+    margin: 3rem 0;
+  }
+
+  #assinaturas .tipo-assinatura {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  #assinaturas .tipo-assinatura p {
+    margin-left: 0;
+  }
+}
+
+#universos h3 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 3rem;
+  color: var(--text-color);
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+#universos #grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  padding: 0 10rem;
+}
+
+@media (max-width: 1100px) {
+  #universos #grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  #universos #grid-container {
+    grid-template-columns: 430px;
+    justify-content: center;
+    padding: 0 15rem;
+  }
+}
+
+@media (max-width: 600px) {
+  #universos #grid-container {
+    grid-template-columns: 350px;
+  }
+}
+
+@media (max-width: 400px) {
+  #universos #grid-container {
+    grid-template-columns: 300px;
+  }
+}
+
+@media (max-width: 300px) {
+  #universos #grid-container {
+    grid-template-columns: 250px;
+    padding: 0;
+  }
+}
+
+.uni-card {
+  width: 100%;
+  height: 550px;
+  border-radius: 15px;
+  cursor: pointer;
+  background-size: cover;
+  background-position: center;
+  transition: background-image 1s ease-in-out, scale 1s ease-in-out;
+}
+
+.uni-card:hover {
+  scale: 1.05;
+}
+
+.uni-card:nth-of-type(1) {
+  background-image: url("../images/hbo-default_0.webp");
+}
+
+.uni-card:nth-of-type(1):hover {
+  background-image: url("../images/hbo-hover_0.webp");
+}
+
+.uni-card:nth-of-type(2) {
+  background-image: url("../images/MAX-Default.webp");
+}
+
+.uni-card:nth-of-type(2):hover {
+  background-image: url("../images/MAX-Hover.webp");
+}
+
+.uni-card:nth-of-type(3) {
+  background-image: url("../images/DC_Default.webp");
+}
+
+.uni-card:nth-of-type(3):hover {
+  background-image: url("../images/DC-Hover.webp");
+}
+
+.uni-card:nth-of-type(4) {
+  background-image: url("../images/WB-Default.webp");
+}
+
+.uni-card:nth-of-type(4):hover {
+  background-image: url("../images/WB-Hover.webp");
+}
+
+.uni-card:nth-of-type(5) {
+  background-image: url("../images/CN-Default.webp");
+}
+
+.uni-card:nth-of-type(5):hover {
+  background-image: url("../images/CN-Hover.png");
+}
+
+.uni-card:nth-of-type(6) {
+  background-image: url("../images/UCL-Default.webp");
+}
+
+.uni-card:nth-of-type(6):hover {
+  background-image: url("../images/UCL-Hover.webp");
+}
+
+footer {
+  font-family: 'Raleway', sans-serif;
+  color: var(--link-color);
+  text-align: center;
+  padding: 15rem 3rem 3rem;
+}
+
+footer #links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 3rem;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 700px) {
+  footer #links {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+}
+
+footer a {
+  color: var(--link-color);
+  letter-spacing: 0.2rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+
+footer p {
+  font-size: 1.2rem;
+  margin-bottom: 5rem;
+}
+
+footer #redes-sociais {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+}
